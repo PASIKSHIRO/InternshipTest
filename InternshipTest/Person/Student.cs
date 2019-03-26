@@ -1,7 +1,6 @@
 ﻿namespace InternshipTest.Person
 {
 
-    //Клас студент
     public class Student
     {   
         public string name;
@@ -13,7 +12,6 @@
             this.SetKnowledge(new Knowledge(knowledge));
         }
         
-        //Метод встановлення оцінки студенту
         public void SetKnowledge(Knowledge knowledge)
         {
             this.knowledge = knowledge;

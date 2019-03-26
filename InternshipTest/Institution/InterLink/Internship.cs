@@ -3,41 +3,25 @@ using System.Collections.Generic;
 
 namespace InternshipTest.Institution.InterLink
 {
-    //Клас Інтернатура
     public class Internship
     {
         public string name;
-        public List<University> universities = new List<University>();//Список університетів
-        public List<Student> Interns = new List<Student>();//Список студентів(інтернів)
+
+        public List<Student> Interns = new List<Student>();
 
         public Internship(string name)
         {
             this.name = name;
         }
 
-        //Метод знаходження середньої оцінки студентів
-        public List<Student> GetStudents()
+        public List<Student> GetInterns()
         {
-            foreach (var university in universities)
-            {
-                float avgLevel = 0;
-
-                foreach (var student in university.students)
-                    avgLevel += student.knowledge.level;
-                avgLevel /= university.students.Count;
-
-                foreach (var student in university.students)
-                    if (student.knowledge.level > avgLevel)
-                        this.Interns.Add(student);
-            }
-
             return this.Interns;
         }
         
-        //Додавання університету
-        public void AddUniversity(University university)
+        public void AddInternLinst(List<Student> InternLinst)
         {
-            universities.Add(university);
+            Interns.AddRange(InternLinst);
         }
     }
 }

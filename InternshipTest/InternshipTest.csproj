@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Institution\InterLink\Internship.cs" />
+    <Compile Include="Institution\InterLink\SelectionInterns.cs" />
     <Compile Include="Institution\University.cs" />
     <Compile Include="Person\Knowledge.cs" />
     <Compile Include="Person\Student.cs" />

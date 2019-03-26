@@ -4,20 +4,24 @@ using System.Collections.Generic;
 
 namespace InternshipTest.Institution
 {
-    //Клас університет
     public class University
     {
         public string name = null;
+        public float avgLevel = 0;
         public List<Student> students = new List<Student>();
 
         public University(string name)
         {
             this.name = name;
         }
-        //Додавання студентів
         public void AddStudent(Student student)
-        {   
+        {
             this.students.Add(student);
+           
+            avgLevel = 0; 
+            foreach (var st in students)
+                avgLevel += st.knowledge.level;
+            avgLevel /= this.students.Count;
         }
     }
 }

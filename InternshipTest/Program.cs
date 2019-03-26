@@ -16,12 +16,14 @@ namespace InternshipTest
             university.AddStudent(new Student("Ivan Momot", knowledge: 27));
             university.AddStudent(new Student("Nastya Shelm", knowledge: 66));
 
+
+            
             Internship internship = new Internship("Interlink");
-            internship.AddUniversity(university);//Додавання університету для інтернатури
+            internship.AddInternLinst(SelectionInterns.ChoiceInterns(university));
             Console.WriteLine("+------------------------------+");
             Console.WriteLine("|LIST OF INTERNSHIP'S STUDENTS:|");
             Console.WriteLine("+------------------------------+");
-            foreach (var student in internship.GetStudents())
+            foreach (var student in internship.GetInterns())
             {
                 Console.WriteLine("| - {0,-20} {1,3}   |", student.name, student.knowledge.level);
             }
