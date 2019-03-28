@@ -44,8 +44,7 @@
     <Compile Include="Institution\InterLink\Internship.cs" />
     <Compile Include="Institution\InterLink\SelectionInterns.cs" />
     <Compile Include="Institution\University.cs" />
-    <Compile Include="Person\IStudenFileCode.cs" />
-    <Compile Include="Person\IStudentFile.cs" />
+    <Compile Include="Person\IStudentIO.cs" />
     <Compile Include="Person\Knowledge.cs" />
     <Compile Include="Person\Student.cs" />
     <Compile Include="Program.cs" />
